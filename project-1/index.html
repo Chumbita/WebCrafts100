@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="conteiner">
+    <h2>Calculadora de propinas</h2>
+    <p>Ingresa el monto de la factura y el porcentaje de propina para calcular el total</p>
+    <label for="bill-amount" class="labels">Importe de la factura:</label>
+    <input type="text" name="bill-amount" id="bill-amount-input" class="inputs">
+    <label for="tip-percentage" class="labels">Porcentaje de propina:</label>
+    <input type="text" name="tip-percentage" id="tip-percentage-input" class="inputs">
+    <button id="btn-calculate">Calcular</button>
+    <div class="total-conteiner">
+      <p id="total-p">Total: </p>
+      <p id="total">$0.00</p>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
