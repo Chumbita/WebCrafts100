@@ -1,0 +1,71 @@
+/* ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  background-color: #fffbf5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  max-width: 600px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ESTILO INPUT*/
+
+#date-input {
+  width: 320px;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  font-weight: 300;
+}
+
+/* ESTILO BOTÓN*/
+#btn-calculate-age {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f6e8c;
+  color: white;
+  cursor: pointer;
+}
+
+#btn-calculate-age:hover {
+  background-color: #155269;
+  transition: 0.3s;
+}
+
+#age-result {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 25px;
+}
