@@ -1,0 +1,103 @@
+/* ESTILOS GENERALES*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  font-size: 40px;
+}
+
+.p {
+  margin: 15px 0px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ESTILO CONTENEDOR DE OPCIONES */
+
+.opc-container{
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ESTILOS DE CADA OPCIÓN*/
+
+.opc-container div {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.opc-container div:hover {
+  width: 105px;
+  height: 105px;
+}
+
+.opc-container div:last-child {
+  margin-right: 0px;
+}
+
+img {
+  width: 65px;
+  height: 65px;
+}
+
+.rock-container{
+  background-color: #fb0404 ;
+}
+
+.scissors-container {
+  background-color: #4cac53;
+}
+
+.paper-container {
+  background-color: #2594f2 ;
+}
+
+/* ESTILOS DE TEXTO */
+
+#score-text {
+  margin: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#score-text span:first-child {
+  color: #4cac53;
+}
+
+#score-text span:last-child {
+  color: #fb0404;
+}
+
+.result-text {
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}

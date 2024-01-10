@@ -1,0 +1,5 @@
+Proyecto 3:
+En este proyecto, creamos un juego de piedra, papel y tijera. La computadora también elegirá una opción aleatoria y se mostrarán los resultados. Puedes ganar, perder o empatar. Las puntuaciones se registran en la parte inferior. Usaremos HTML para la estructura, CSS para un aspecto moderno y JavaScript para generar la elección de la computadora y comparar los resultados. Este juego es una forma interactiva de poner a prueba tu suerte y estrategia contra un oponente de la computadora.
+
+Project 3: 
+In this project, we create a rock, paper, and scissors game. The computer will also choose a random option, and the results will be displayed. You can win, lose, or tie. Scores are tracked at the bottom. We'll use HTML for structure, CSS for a modern look, and JavaScript to generate the computer's choice and compare the results. This game is an interactive way to test your luck and strategy against a computer opponent.
