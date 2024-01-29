@@ -10,10 +10,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #bc4c4c;
+  transition: all 0.3s linear;
 }
 
 .container {
-  width: 85vw;
+  width: 90vw;
   height: 500px;
   display: flex;
   justify-content: space-between;
@@ -24,7 +25,8 @@ body {
 }
 
 .img {
-  width: 50%;
+  min-width: 500px;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -36,14 +38,14 @@ body {
 }
 
 .container section {
-  width: 50%;
+  max-width: 50%;
+  min-width: 250px;
   height: 100%;
   box-sizing: border-box;
   background-color: #c45c5c ;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .bar-container {
@@ -97,7 +99,7 @@ body {
 }
 
 .text-container p {
-  font-size: 19px;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -117,3 +119,4 @@ body {
 .step-3 {
   display: none;
 }
+

@@ -1,0 +1,6 @@
+Proyecto 7: 
+En este proyecto, creamos una lista de tareas minimalista. Podemos agregar una nueva tarea a la lista usando el campo de entrada haciendo click en el botón o apretando la tecal Enter. Con cada tarea, hay dos iconos: una marca de verificación y una papelera. La marca de verificación le permite marcar la tarea como completada, mientras que la papelera le permite eliminar la tarea.
+
+Proyect 7:
+In this project, we created a minimalist task list. We can add a new task to the list using the input field by clicking the button or pressing the Enter key. With each task, there are two icons: A checkmark and a trash bin. The checkmark allows you to mark the task as completed, while the trash allows you to delete the task.
+
