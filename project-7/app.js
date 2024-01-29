@@ -4,15 +4,19 @@ const $tareas = document.querySelector(".tareas-container");
 
 function aregarTarea(){
 	if(input.value){
+		//Se crea la terea
 		let $tareaNueva = document.createElement("div");
 		$tareaNueva.classList.add("tarea");
 
+		//Se crea el p y el contenido del input se almacena en el p
 		let $texto = document.createElement("p");
 		$texto.innerHTML = input.value;
 
+		//Se crea el contenedor de iconos
 		let $iContainer = document.createElement("div");
 		$iContainer.classList.add("icon-container");
 
+		//Se crean y agregan eventos y clases a los iconos
 		let $checkIcon = document.createElement("i");
 		$checkIcon.classList.add("bi", "bi-check-circle-fill");
 		$checkIcon.addEventListener("click", completarTarea);
