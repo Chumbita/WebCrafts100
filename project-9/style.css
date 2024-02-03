@@ -93,6 +93,18 @@ body {
   background-color: #f54739;
 }
 
-button:hover {
+.simple-btn:hover {
   background-color: #565656;
+}
+
+.operation-btn:hover {
+  background-color: #0968c1;
+}
+
+.delete-btn:hover {
+  background-color: rgb(225, 53, 41);;
+}
+
+.equal-button:hover {
+  background-color: #06dc66;
 }
