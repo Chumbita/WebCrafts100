@@ -83,6 +83,7 @@ p {
   margin-left: 30px;
   font-size: 18px;
   display: none;
+  animation: text-open 0.5s forwards;
 }
 
 .i-house.active,
@@ -213,6 +214,24 @@ p {
   }
 }
 
+@keyframes text-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* ESTILOS CUANDO SE DESPLIEGA EL SIDEBAR*/
 
 .sidebar-container.open {
@@ -231,6 +250,7 @@ p.open {
   display: block;
   transition: transform 0.5s;
   cursor: pointer;
+  animation: text-open 0.5s forwards;
 }
 
 .i-house.open.active,
