@@ -40,18 +40,18 @@ $menu.addEventListener("click", () => {
 
 $iconsBtns.forEach(icon => {
     icon.addEventListener("click", (e) => {
-        if($menu.classList.contains("open") == true){
             desactivateText();
+            desactivateIcons();
+            icon.classList.add("active");
             icon.nextElementSibling.classList.add("activate");
-            console.log("Hola");
-            desactivateIcons();
-            icon.classList.add("active");
-        }
-
-        else {
-            desactivateIcons();
-            icon.classList.add("active");
-        }
-        
     })
 });
+
+$pElements.forEach(p => {
+    p.addEventListener("click", (e) => {
+        desactivateText();
+        desactivateIcons();
+        p.previousElementSibling.classList.add("active");
+        p.classList.add("activate");  
+    })  
+})

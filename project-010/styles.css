@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -11,13 +12,13 @@ body {
 }
 
 .sidebar-container {
-  background-color: #FFF;
   width: 70px;
   margin: 30px;
   border-radius: 10px;
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
-  transition: 0.5s;
+  transition: width 0.5s;
 }
 
 .menu-container {
@@ -31,19 +32,19 @@ body {
 .lines-container {
   width: 40%;
   height: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .lines {
   width: 100%;
   height: 1.8px;
-  background-color: #000;
   position: absolute;
+  background-color: #000;
 }
 
 .line-botton {
@@ -52,21 +53,20 @@ body {
 }
 
 .navegation-container {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  margin: 70px 0px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
-  margin: 70px 0px;
 }
 
 .navegation-opc {
   width: 70px;
   height: 70px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 i {
@@ -80,80 +80,71 @@ i {
 }
 
 p {
-  display: none;
-  font-size: 20px;
-  opacity: 0;
   margin-left: 30px;
-  transition: all 0.5s;
+  font-size: 18px;
+  display: none;
+}
+
+.i-house.active,
+.i-about.active,
+.i-message.active,
+.i-photos.active,
+.i-setting.active {
+  color: #fff;
+  position: absolute;
+  transform: translateX(35px);
+  transition: transform 0.6s;
 }
 
 .i-house.active {
   background-color: #FE5438;
-  color: #fff;
-  position: absolute;
-  transform: translateX(35px);
-  transition: all 0.5s;
-  
 }
 
 .i-about.active {
   background-color: #F89C1D;
-  color: #fff;
-  position: absolute;
-  transform: translateX(35px);
-  transition:  0.5s;
-  
 }
 
 .i-message.active {
   background-color: #01AA0E;
-  color: #fff;
-  position: absolute;
-  transform: translateX(35px);
-  transition: all 0.5s;
-  
 }
 
 .i-photos.active {
   background-color: #158feb;
-  color: #fff;
-  position: absolute;
-  transform: translateX(35px);
-  transition: all 0.5s;
-  
 }
 
 .i-setting.active {
   background-color: #aa52d7;
-  color: #fff;
-  position: absolute;
-  transform: translateX(35px);
-  transition: all 0.5s;
 }
 
-
+/* ANIMACIÓN DEL MENÚ DE HAMBURGUESA*/
 .line1 {
   animation: menu-close1 0.7s forwards;
+  will-change: transform;
 }
 
 .line2 {
   animation: menu-close2 0.7s forwards;
+  will-change: transform;
 }
 
 .line3 {
   animation: menu-close3 0.7s forwards;
+  will-change: transform;
 }
 
 .open .line1 {
   animation: menu-open1 0.7s forwards;
+  will-change: transform;
 }
 
 .open .line2 {
   animation: menu-open2 0.7s forwards;
+  will-change: transform;
 }
 
 .open .line3 {
   animation: menu-open3 0.7s forwards;
+  will-change: transform;
 }
 
 @keyframes menu-open1 {
@@ -223,12 +214,9 @@ p {
 }
 
 /* ESTILOS CUANDO SE DESPLIEGA EL SIDEBAR*/
+
 .sidebar-container.open {
   width: 280px;
-}
-
-.menu-container.open {
- width: 70px;
 }
 
 .navegation-opc.open {
@@ -241,62 +229,43 @@ p {
 
 p.open {
   display: block;
-  opacity: 1;
-  transition: opacity 0.5s;
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
-
-.i-house.open.active {
-  transform: translateX(15px);
-  position: static;
-}
-
-.i-about.open.active {
-  transform: translateX(15px);
-  position: static;
-}
-
-.i-message.open.active {
-  transform: translateX(15px);
-  position: static;
-}
-
-.i-photos.open.active {
-  transform: translateX(15px);
-  position: static;
-}
-
+.i-house.open.active,
+.i-about.open.active,
+.i-message.open.active,
+.i-photos.open.active,
 .i-setting.open.active {
   transform: translateX(15px);
   position: static;
 }
 
-.p-house.open.activate {
+.p-house.open.activate,
+.p-message.open.activate,
+.p-about.open.activate,
+.p-camera.open.activate,
+.p-setting.open.activate {
   transform: translateX(15px);
-  transition: all 0.5s;
+}
+
+.p-house.open.activate{
   color: #FE5438;
 }
 
 .p-about.open.activate {
-  transform: translateX(15px);
-  transition: all 0.5s;
   color: #F89C1D;
 }
 
 .p-message.open.activate {
-  transform: translateX(15px);
-  transition: all 0.5s;
   color: #01AA0E;
 }
 
 .p-camera.open.activate {
-  transform: translateX(15px);
-  transition: all 0.5s;
   color: #158feb;
 }
 
 .p-setting.open.activate {
-  transform: translateX(15px);
-  transition: all 0.5s;
   color: #aa52d7;
 }
