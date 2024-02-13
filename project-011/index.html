@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +8,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <title>Document</title>
+  <title>Login Format</title>
 </head>
 <body>
   <div class="container">
     <div class="login-container">
+      <img class="logo-img" src="/assets/logo.png" alt="">
       <h2 class="login-container__title" >Login</h2>
       <div class="login-container__form">
         <label for="username" class="login-container__label">Usuario o correo electrónico</label>
         <input type="text" name="username" id="username-input" class="login-container__input">
         <label for="password" class="login-container__label">Contraseña</label>
         <input type="password" name="password" id="password-input" class="login-container__input">
+        <div class="login-container__text-container">
+          <p class="login-container__p">¿Olvidaste tu contraseña?</p>
+        </div>
         <button class="login-container__button">Iniciar Sesión</button>
       </div>
       <div class="login-container__separate">
         <div class="login-container__line"></div>
         <span class="login-container__text">o</span>
         <div class="login-container__line"></div>
-     </div>
+      </div>
       <div class="login-container__google-option">
         <i><img class="login-container__google-icon" src="/assets/google.png" alt=""></i>
         <p class="login-container__google-text">Continuar con Google</p>
       </div>
+      <p class="register-container__text">¿No tienes una cuenta? <span class="register-container__text-span">Registrate</span></p>
     </div>
     <div class="about-container">
       <img class="about-container__image" src="/assets/about-img.jpg" alt="">
