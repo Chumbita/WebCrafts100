@@ -11,174 +11,55 @@ body {
 }
 
 .about-container {
-  width: 50%;
+  width: 100%;
   height: 100%;
   background-color: #023047;
   right: 0;
-  z-index: 20;
+  z-index: 2;
   position: absolute;
   transition: all 0.6s;
+  transform: translateX(50%);
 }
 
-/* LOGIN STYLES */
+.about-container.toggle{
+  transform: translateX(-50%);
+}
 
+/* LOGIN CONTAINER STYLES */
 .login-container {
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 50%;
   position: absolute;
-  left: 0;
-  transition: transform 0.5s opacity 0.6s;
-  z-index: 2;
 }
 
-.login-logo img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 30px;
-}
-
-.login-container__title {
-  font-size: 30px;
-}
-
-.login-form {
-  min-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 25px;
-}
-
-.login-container__label {
-  font-size: 13px;
-  margin: 15px 0px 5px 0px;
-}
-
-.login-container__input {
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #c2c8d0;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.login-container__text-container {
+.login-form__text-container {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-.login-container__p {
+.login-form__p {
   font-size: 13px;
   cursor: pointer;
 }
 
-.login-container__button {
-  margin: 20px 0px 0px 0px;
-  border: none;
-  width: 100%;
-  padding: 13px;
-  background-color: #023047;
-  border-radius: 5px;
-  color: #FFF;
-  cursor: pointer;
-}
-
-.login-separate {
-  margin-top: 20px;
-  display: flex;
-  min-width: 350px;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-separate__line {
-  width: 100%;
-  height: 1.4px;
-  background-color: #c2c8d0;
-}
-
-.login-separate__text {
-  margin: 0px 20px;
-}
-
-.login-options {
-  display: flex;
-  align-items: center;
-  min-width: 350px;
-  border: 1px solid #c2c8d0;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-.login-container__google-icon {
-  width: 20px;
-  height: 20px;
-  margin: 0px 30px 0px 10px;
-}
-
-.login-container__google-text {
-  font-size: 14px;
-}
-
-.register-container__text {
-  font-size: 15px;
-  min-width: 260px;
-  margin-top: 20px;
-}
-
-.register-container__text-span {
-  cursor: pointer;
-  color: #0096f6;
-}
-
-
-.about-container__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; 
-}
-
-
-/* REGISTER STYLES*/
+/* REGISTER CONTAINER STYLES*/
 .register-container {
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 50%;
-  opacity: 0;
+  right: 0;
   position: absolute;
-  left: 0;
-  z-index: 1;
-  transition: opacity 0.6s;
 }
 
-.register-logo img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 30px;
-}
-
-.register-title {
-  font-size: 30px;
-}
-
-.register-form {
-  min-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 25px;
-}
 
 .register-form__name-container {
   display: flex;
@@ -192,11 +73,41 @@ body {
   flex-direction: column;
 }
 
-.register-form__label {
-  font-size: 13px;
-  margin: 10px 0px 5px 0px;
+/* LOGIN Y REGISTER LOGO STYLE*/
+.login-logo img,
+.register-logo img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+  user-select: none;
 }
 
+/* LOGIN Y REGISTER TITLE (H2) STYLE*/
+.login-title,
+.register-title {
+  font-size: 30px;
+  
+}
+
+/* LOGIN Y REGISTER FORM CONTAINER STYLE*/
+.login-form, 
+.register-form {
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+/* LOGIN Y REGISTER LABELS STYLE*/
+.login-form__label, 
+.register-form__label {
+  font-size: 13px;
+  margin: 15px 0px 5px 0px;
+}
+
+/* LOGIN Y REGISTER INPUTS STYLE*/
+.login-form__input, 
 .register-form__input {
   padding: 10px;
   width: 100%;
@@ -205,8 +116,10 @@ body {
   margin-bottom: 10px;
 }
 
+/* LOGIN Y REGISTER BUTTONS STYLE*/
+.login-form__btn,
 .register-form__btn {
-  margin: 10px 0px;
+  margin: 20px 0px 0px 0px;
   border: none;
   width: 100%;
   padding: 13px;
@@ -216,76 +129,103 @@ body {
   cursor: pointer;
 }
 
+.login-form__btn:hover,
+.register-form__btn:hover {
+  background-color: #022536;
+} 
+
+/* LOGIN Y REGISTER SEPARATE LINE STYLE*/
+.login-separate, 
 .register-separate {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
-  min-width: 380px;
+  min-width: 350px;
   justify-content: center;
   align-items: center;
 }
 
-.register-separate__line{
+.login-separate__line,
+.register-separate__line {
   width: 100%;
   height: 1.4px;
   background-color: #c2c8d0;
 }
 
+.login-separate__text,
 .register-separate__text {
   margin: 0px 20px;
 }
 
+/* LOGIN Y REGISTER OPTIONS STYLE*/
+.login-options, 
 .register-options {
   display: flex;
   align-items: center;
-  min-width: 380px;
+  min-width: 350px;
   border: 1px solid #c2c8d0;
   border-radius: 5px;
   padding: 10px;
   margin-top: 15px;
   cursor: pointer;
 }
-i .login-container__google-icon {
+
+.login-container__google-icon,
+.register-container__google-icon {
   width: 20px;
   height: 20px;
   margin: 0px 30px 0px 10px;
 }
 
-.login-container__google-text {
+.login-container__google-text,
+.register-container__google-text {
   font-size: 14px;
 }
+
+.login-container__text,
+.register-container__text {
+  font-size: 15px;
+  min-width: 260px;
+  margin-top: 20px;
+}
+
+.login-container__text-btn,
+.register-container__text-btn {
+  cursor: pointer;
+  color: #0096f6;
+}
+
 
 @media (max-width: 992px) {
   .about-container {
     display: none;
   }
   body {
-    margin: -50px 0px;
+    margin: -30px 0;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    width: 100vw;
+  }
+
+  .register-container {
+    width: 80%;
+    position: unset;
+    transform: translateX(200%);
+    transition: all 0.3s;
+  }
+
+  .login-container {
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .login-container.toggle{
+    transform: translateX(200%);
+  }
+
+  .register-container.toggle {
+    transform: translateX(0%);
+    transition: all 0.3s;
   }
 }
-
-
-.login-container.toggle {
-  opacity: 0;
-  transition: all 0.6;
-  transform: translateX(100%);
-}
-
-.register-container.toggle {
-  opacity: 1;
-  transition: transform 0.3s opacity 0.6s;
-  transform: translateX(100%);
-  z-index: 2;
-}
-
-.about-container.toggle{
-  transform: translateX(-100%);
-}
-
-
-
-
-
-

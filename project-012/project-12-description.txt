@@ -1,0 +1,13 @@
+Proyecto 12: 
+Este proyecto presenta una página web diseñada para ofrecer una experiencia fluida y agradable a los usuarios que desean iniciar sesión o registrarse en un sitio. La interfaz minimalista y moderna permite una fácil navegación en dispositivos de diferentes tamaños gracias a su diseño responsivo.
+
+Se ha implementado una metodología similar a BEM en el nombramiento de clases CSS para mantener una estructura ordenada y fácil de entender. La página incluye animaciones sutiles que mejoran la experiencia del usuario, como transiciones suaves al cambiar entre las vistas de inicio de sesión y registro.
+
+Es importante aclarar de que se usó la plantilla de inicio de sesión del proyecto 11 como base y se le aplicaron algunas mejoras y funcionalidades. 
+
+Project 12:
+This project features a web page designed to provide a smooth and pleasant experience for users who wish to log in or register on a site. The minimalist and modern interface allows for easy navigation on devices of different sizes thanks to its responsive design.
+
+A methodology similar to BEM has been implemented in the naming of CSS classes to maintain an organized and easy-to-understand structure. The page includes subtle animations that enhance the user experience, such as smooth transitions when switching between the login and registration views.
+
+It's important to clarify that the login template from project 11 was used as a base and some improvements and functionalities were applied to it.

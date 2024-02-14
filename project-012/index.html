@@ -10,19 +10,18 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
     <div class="login-container">
       <i class="login-logo"><img src="/assets/logo.png" alt=""></i>
-      <h2 class="login-title" >Login</h2>
+      <h2 class="login-title" >Inciar Sesión</h2>
       <div class="login-form">
-          <label for="username" class="login-container__label">Usuario o correo electrónico</label>
-          <input type="text" name="username" id="username-input" class="login-container__input">
-          <label for="password" class="login-container__label">Contraseña</label>
-          <input type="password" name="password" id="password-input" class="login-container__input">
-          <div class="login-container__text-container">
-            <p class="login-container__p">¿Olvidaste tu contraseña?</p>
+          <label for="username" class="login-form__label">Correo electrónico</label>
+          <input type="text" name="username" id="username-input" class="login-form__input inputs">
+          <label for="password" class="login-form__label">Contraseña</label>
+          <input type="password" name="password" id="password-input" class="login-form__input inputs">
+          <div class="login-form__text-container">
+            <p class="login-form__p">¿Olvidaste tu contraseña?</p>
           </div>
-          <button class="login-container__button">Iniciar Sesión</button>
+          <button class="login-form__btn">Iniciar Sesión</button>
       </div>
       <div class="login-separate">
         <div class="login-separate__line"></div>
@@ -33,10 +32,9 @@
         <i><img class="login-container__google-icon" src="/assets/google.png" alt=""></i>
         <p class="login-container__google-text">Continuar con Google</p>
       </div>
-      <p class="register-container__text">¿No tienes una cuenta? <span class="register-container__text-span btn">Registrate</span></p>
+      <p class="login-container__text">¿No tienes una cuenta? <span class="login-container__text-btn btn">Registrate</span></p>
       </div>
     </div>
-    
     <div class="register-container">
       <i class="register-logo"><img src="/assets/logo.png" alt=""></i>
       <h2 class="register-title">Regístrate</h2>
@@ -44,32 +42,31 @@
         <div class="register-form__name-container">
           <div class="register-form__name">
             <label for="" class="register-form__label">Nombre</label>
-            <input type="text" class="register-form__input">
+            <input type="text" class="register-form__input inputs">
           </div>
           <div class="register-form__lastname">
             <label for="" class="register-form__label">Apellido</label>
-            <input type="text" class="register-form__input">
+            <input type="text" class="register-form__input inputs">
           </div>
         </div>
         <label for="" class="register-form__label">E-mail</label>
-        <input type="email" class="register-form__input">
+        <input type="email" class="register-form__input inputs">
         <label for="" class="register-form__label">Contraseña</label>
-        <input type="password" class="register-form__input">
+        <input type="password" class="register-form__input inputs">
         <button class="register-form__btn">Registrarse</button>
       </div>
-      <p class="register-container__text">¿Ya tienes una cueta? <span class="register-container__text-span btn">Inicia Sesión</span></p>
+      <p class="register-container__text">¿Ya tienes una cueta? <span class="register-container__text-btn btn">Inicia Sesión</span></p>
       <div class="register-separate">
         <div class="register-separate__line"></div>
         <span class="register-separate__text">o</span>
         <div class="register-separate__line"></div>
       </div>
       <div class="register-options">
-        <i><img class="login-container__google-icon" src="/assets/google.png" alt=""></i>
-        <p class="login-container__google-text">Registrarse con Google</p>
+        <i><img class="register-container__google-icon" src="/assets/google.png" alt=""></i>
+        <p class="register-container__google-text">Registrarse con Google</p>
       </div>
     </div>
     <div class="about-container"></div>
-  </div>
 
   <script src="/app.js"></script>
 </body>
