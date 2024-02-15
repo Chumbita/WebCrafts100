@@ -8,6 +8,16 @@
 body {
   height: 100vh;
   overflow: hidden;
+  width: 100vw;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
 }
 
 .about-container {
@@ -27,13 +37,12 @@ body {
 
 /* LOGIN CONTAINER STYLES */
 .login-container {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
 }
 
 .login-form__text-container {
@@ -50,27 +59,26 @@ body {
 
 /* REGISTER CONTAINER STYLES*/
 .register-container {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  right: 0;
-  position: absolute;
 }
 
 
 .register-form__name-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  gap: 20px;
+  gap: 20px
 }
 
 .register-form__name, .register-form__lastname {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* LOGIN Y REGISTER LOGO STYLE*/
@@ -86,13 +94,12 @@ body {
 .login-title,
 .register-title {
   font-size: 30px;
-  
 }
 
 /* LOGIN Y REGISTER FORM CONTAINER STYLE*/
 .login-form, 
 .register-form {
-  min-width: 350px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -161,7 +168,7 @@ body {
 .register-options {
   display: flex;
   align-items: center;
-  min-width: 350px;
+  width: 100%;
   border: 1px solid #c2c8d0;
   border-radius: 5px;
   padding: 10px;
@@ -184,7 +191,6 @@ body {
 .login-container__text,
 .register-container__text {
   font-size: 15px;
-  min-width: 260px;
   margin-top: 20px;
 }
 
@@ -194,38 +200,42 @@ body {
   color: #0096f6;
 }
 
-
+/* REPONSIVE */
 @media (max-width: 992px) {
   .about-container {
     display: none;
   }
   body {
-    margin: -30px 0;
+    margin: -30px auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    overflow: hidden;
   }
 
-  .register-container {
-    width: 80%;
-    position: unset;
-    transform: translateX(200%);
-    transition: all 0.3s;
+  .container {
+    padding: 30px;
   }
 
   .login-container {
-    width: 100%;
-    transition: all 0.3s;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+  }
+
+ .register-container {
+    transform: translateX(200%);
+    transition: all 0.6s ease-in-out;
+    position: absolute;
   }
 
   .login-container.toggle{
     transform: translateX(200%);
+    transition: all 0.6s ease-in-out;
   }
 
   .register-container.toggle {
-    transform: translateX(0%);
-    transition: all 0.3s;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
   }
 }
