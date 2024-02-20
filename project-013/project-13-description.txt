@@ -1,0 +1,5 @@
+Proyecto 13: 
+En este proyecto se diseñó una galería de fotos dinámica y responsive. En esta galería, el usuario es capaz de clickear en las imagenes lo cual hace que se despliegue una ventana modal con la imagen seleccionada, además la web es adaptable a diferentes dispositivos. Cabe aclarar que el botón "Página siguiente" no presenta una funcionalidad de momento pero se espera agregarle dicha funcionalidad en un futuro.
+
+Project 13:
+In this project, a dynamic and responsive photo gallery was designed. In this gallery, the user is able to click on the images, which opens a modal window with the selected image. Additionally, the website is adaptable to different devices. It is worth mentioning that the "Next Page" button does not currently have functionality, but it is expected to add this functionality in the future.
