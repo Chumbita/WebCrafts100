@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 85px;
+  background-color: #34495E;
+  text-align: center;
+  color: #FFF;
+  padding: 20px;
+}
+
+.header-title{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.password-container {
+  margin: 100px 0 20px 0;
+  padding: 20px;
+  width: 600px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.password-container-content {
+  width: 100%;
+}
+
+.password-container-content__text {
+  font-size: 28px;
+  margin-left: 5px;
+}
+
+.password-container-icons {
+  width: 100px;
+  text-align: center;
+  font-size: 25px;
+  color: #667586;
+}
+
+.password-container-icon {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.custom-container {
+  width: 600px;
+  height: 200px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-container__title {
+  font-size: 22px;
+}
+
+.custom-container__line {
+  height: 3px;
+  width: 100%;
+  background-color: #f0f2f5;
+}
+
+.custom-container-opc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.lp-custom-container{
+  flex: 50%;
+}
+
+
+.lp-custom-container-range {
+  margin-top: 15px;
+}
+
+.lp-custom-container__text {
+  font-size: 17px;
+}
+
+#lp-custom-container-range__num {
+  padding: 12px 5px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #cecece;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+#lp-custom-container-range__rinp {
+  padding: 0 25px;
+}
+
+.cp-container {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp-container-opc {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  gap: 5px;
+}
+
+.cp-container__opc {
+  transform: scale(1.3);
+  margin-right: 3px;
+}
+
+.pg-button {
+  margin-top: 10px;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #34495E;
+  color: #FFF;
+  font-weight: 500;
+}
+
+
