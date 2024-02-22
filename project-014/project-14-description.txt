@@ -1,0 +1,5 @@
+Proyecto 14
+Se ha creado un generador de contraseñas simple y minimalista que brinda al usuario la posibilidad de elegir la longitud de la contraseña a generar, así como los tipos de caracteres que debe incluir (números, letras mayúsculas y/o minúsculas, o símbolos). Además, se ofrece la opción de copiar la contraseña generada al portapapeles. Todas estas funcionalidades han sido implementadas mediante JavaScript, mientras que el diseño se ha realizado utilizando HTML y CSS.
+
+Project 14
+A simple and minimalist password generator has been designed, allowing users to choose the length of the password to generate as well as the types of characters it should include (numbers, uppercase and/or lowercase letters, or symbols). Additionally, users have the option to copy the generated password to their clipboard. All these functionalities have been implemented using JavaScript, while the design has been created using HTML and CSS.
