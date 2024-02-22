@@ -9,8 +9,7 @@ const $numbersCheckbox = document.getElementById("numbers");
 const $simbolsCheckbox = document.getElementById("symbols");
 const $clipBoardBtn = document.querySelector(".password__icon");
 
-const symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '', '{', '|', '}', '~'];
-
+const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', '\'', '&lt', '&gt', ',', '.', '?', '/', '~'];
 $checkboxes.forEach(checkbox => {
   checkbox.addEventListener('change', () => {
     const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -31,25 +30,25 @@ $lpRange.addEventListener("change", (e)=> {
 $pgButton.addEventListener("click", (e) => {
   let password = "";
   let i = 0;
-  while (i < $lpNumber.value) {
-    let char = Math.floor(Math.random() * 5);
+  while (i < parseInt($lpNumber.value)) {
+    let char = Math.floor(Math.random() * 4) + 1;
     if(char === 1 && $uppersCheckbox.checked) {
-      let asciiValue = Math.floor(Math.random() * (90 - 65 + 1)) + 65;
+      let asciiValue = Math.floor(Math.random() * (90 - 65 + 1) + 65);
       password += String.fromCharCode(asciiValue);
       i++;
     }
     else if(char === 2 && $lowersCheckbox.checked) {
-      let asciiValue = Math.floor(Math.random() * (122 - 97 + 1)) + 97;
+      let asciiValue = Math.floor(Math.random() * (122 - 97 + 1) + 97);
       password += String.fromCharCode(asciiValue);
       i++;
     }
     else if(char === 3 && $numbersCheckbox.checked) {
-      let asciiValue = Math.floor(Math.random() * (57 - 48 + 1)) + 48;
+      let asciiValue = Math.floor(Math.random() * (57 - 48 + 1) + 48);
       password += String.fromCharCode(asciiValue);
       i++;
     }
     else if(char === 4 && $simbolsCheckbox.checked){
-      let n = Math.floor(Math.random() * 29);
+      let n = Math.floor(Math.random() * 31);
       password += symbols[n];
       i++;
     }
