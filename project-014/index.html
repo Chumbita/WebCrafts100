@@ -18,36 +18,37 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header-title">Generador de contraseñas</h1>
+      <h1 class="header__title">Generador de contraseñas</h1>
     </header>
     <main class="main">
-      <div class="password-container">
-        <div class="password-container-content">
-          <p class="password-container-content__text">932489023849234892384</p>
+      <div class="password">
+        <div class="password__content">
+          <p id="password-ui" class="password__text">
+            932489023849234892384
+          </p>
         </div>
-        <div class="password-container-icons">
-          <i class="password-container-icon bi bi-copy"></i>
-          <i class="password-container-icon bi bi-arrow-clockwise"></i>
+        <div class="password__icons">
+          <i class="password__icon bi bi-copy"></i>
         </div>
       </div>
-      <div class="custom-container">
-        <h2 class="custom-container__title">Personalice su contraseña</h2>
-        <div class="custom-container__line"></div>
-        <div class="custom-container-opc">
-          <div class="lp-custom-container">
-            <label class="lp-custom-container__text"
+      <div class="custom">
+        <h2 class="custom__title">Personalice su contraseña</h2>
+        <div class="custom__line"></div>
+        <div class="custom__options">
+          <div class="length">
+            <label class="length__text"
               >Longitud de la contraseña</label
             >
-            <div class="lp-custom-container-range">
+            <div class="length__range">
               <input
-                id="lp-custom-container-range__num"
+                id="length__num"
                 type="number"
                 min="0"
                 max="20"
                 value="12"
               />
               <input
-                id="lp-custom-container-range__rinp"
+                id="length__rinp"
                 type="range"
                 min="0"
                 max="20"
@@ -55,29 +56,29 @@
               />
             </div>
           </div>
-          <div class="cp-container">
-            <div class="cp-container-opc">
-              <label for="" class="cp-container__text"
-                ><input type="checkbox" class="cp-container__opc" />
+          <div class="options">
+            <div class="options__container">
+              <label for="" class="options__text"
+                ><input id="uppers" type="checkbox" class="options__checkbox" checked/>
                 Mayúsculas</label
               >
-              <label for="" class="cp-container__text"
-                ><input type="checkbox" class="cp-container__opc" />
+              <label for="" class="options__text"
+                ><input id="lowers" type="checkbox" class="options__checkbox" checked />
                 Minúsculas</label
               >
-              <label for="" class="cp-container__text"
-                ><input type="checkbox" class="cp-container__opc" />
+              <label for="" class="options__text"
+                ><input id="numbers" type="checkbox" class="options__checkbox" />
                 Números</label
               >
-              <label for="" class="cp-container__text"
-                ><input type="checkbox" class="cp-container__opc" />
+              <label for="" class="options__text"
+                ><input id="symbols" type="checkbox" class="options__checkbox" />
                 Símbolos</label
               >
             </div>
           </div>
         </div>
       </div>
-      <button class="pg-button">Generar contraseña</button>
+      <button id="generate-button" class="generate-button">Generar contraseña</button>
     </main>
     <script src="/app.js"></script>
   </body>

@@ -18,7 +18,7 @@ body {
   padding: 20px;
 }
 
-.header-title{
+.header__title{
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -34,7 +34,7 @@ body {
   gap: 10px;
 }
 
-.password-container {
+.password {
   margin: 100px 0 20px 0;
   padding: 20px;
   width: 600px;
@@ -48,28 +48,49 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.password-container-content {
+.password__content {
   width: 100%;
 }
 
-.password-container-content__text {
+.password__text {
   font-size: 28px;
   margin-left: 5px;
 }
 
-.password-container-icons {
+.password__icons {
   width: 100px;
   text-align: center;
   font-size: 25px;
   color: #667586;
 }
 
-.password-container-icon {
+.password__icon {
   cursor: pointer;
-  margin: 0 5px;
 }
 
-.custom-container {
+.password__icon::after {
+  content: "Copiar";
+  position: absolute;
+  transform: translate(15px, -6px);
+  padding: 10px;
+  font-size: 15px;
+  font-style: normal;
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.6 ease;
+}
+
+.password__icon:hover::after{
+  opacity: 1;
+}
+
+.password__icon:hover:active {
+  font-size: 22px;
+}
+
+.custom {
   width: 600px;
   height: 200px;
   padding: 20px;
@@ -82,36 +103,36 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.custom-container__title {
+.custom__title {
   font-size: 22px;
 }
 
-.custom-container__line {
+.custom__line {
   height: 3px;
   width: 100%;
   background-color: #f0f2f5;
 }
 
-.custom-container-opc {
+.custom__options {
   width: 100%;
   height: 100%;
   display: flex;
 }
 
-.lp-custom-container{
+.length {
   flex: 50%;
 }
 
 
-.lp-custom-container-range {
+.length__range {
   margin-top: 15px;
 }
 
-.lp-custom-container__text {
+.length__text {
   font-size: 17px;
 }
 
-#lp-custom-container-range__num {
+#length__num {
   padding: 12px 5px;
   border: none;
   border-radius: 5px;
@@ -121,33 +142,33 @@ body {
   margin-right: 20px;
 }
 
-#lp-custom-container-range__rinp {
+#length__rinp {
   padding: 0 25px;
 }
 
-.cp-container {
+.options {
   flex: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cp-container-opc {
+.options__container {
   display: flex;
   flex-direction: column;
   font-size: 17px;
   gap: 5px;
 }
 
-.cp-container__opc {
+.options__checkbox {
   transform: scale(1.3);
   margin-right: 3px;
 }
 
-.pg-button {
+.generate-button {
   margin-top: 10px;
   border: none;
-  padding: 20px;
+  padding: 18px;
   border-radius: 15px;
   font-size: 16px;
   cursor: pointer;
@@ -156,4 +177,6 @@ body {
   font-weight: 500;
 }
 
-
+.generate-button:hover:active {
+  transform: scale(0.95);
+}
