@@ -11,11 +11,11 @@
   <title>Document</title>
 </head>
 <body>
-  <header class="header">
+  <header id="home" class="header">
     <nav class="header__nav">
       <ul class="nav__list">
         <li class="nav__item active">
-          <a href="#" class="nav__links">Home</a>
+          <a href="#home" class="nav__links">Home</a>
         </li>
         <li class="nav__item">
           <a href="#" class="nav__links">About</a>
@@ -29,20 +29,20 @@
       </ul>
     </nav>
   </header>
-  <section class="hero">
-    <div class="hero__content">
-      <h1 class="hero__title">INTERESTELLAR</h1>
-      <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa exercitationem voluptates quasi, numquam accusantium voluptas assumenda, aliquam veniam laboriosam optio! Incidunt non modi, illum ab quibusdam adipisci nam provident.</p>
+  <section class="section home">
+    <div class="home__content">
+      <h1 class="home__title">INTERESTELLAR</h1>
+      <p class="home__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa exercitationem voluptates quasi, numquam accusantium voluptas assumenda, aliquam veniam laboriosam optio! Incidunt non modi, illum ab quibusdam adipisci nam provident.</p>
     </div>
-    <div class="hero__info">
-      <span id="button" class="material-symbols-outlined info-arrow">
+    <div class="home__info-position circle-info">
+      <span id="button" class="material-symbols-outlined circle">
         radio_button_checked
         </span>
-      <p class="hero__info-text">Mann's Planet</p>
+      <p class="hero__info-text circle-info__text">Mann's Planet</p>
     </div>
   </section>
-  <section class="about">
-    <h2 class="about__title">About</h2>
+  <section id="about" class="section about">
+    <h2 class="about__title title">About</h2>
     <div class="sinopsis">
       <h3 class="sinopsis__title">Sinopsis</h3>
       <p class="sinopsis__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum ex eum minima magni qui reiciendis explicabo, nulla soluta illo at, maxime asperiores odio repudiandae est necessitatibus repellat reprehenderit omnis aperiam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, pariatur dignissimos earum deserunt voluptatibus explicabo laborum quis. Doloribus nostrum quae ipsam. Aperiam optio neque doloremque dolorem sit nesciunt eos nam.</p>
@@ -60,28 +60,99 @@
         <p>Writer</p>
       </div>
     </div>
-    <div class="about__info">
-      <span id="button" class="material-symbols-outlined info-arrow">
+    <div class="about__info-position circle-info">
+      <span id="button" class="material-symbols-outlined circle">
         radio_button_checked
         </span>
-      <div class="about-info">
-        <h3 class="about__into-title">Gargantúa</h3>
-        <p class="about__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam repellat rerum placeat animi! Explicabo, id! Illo dicta tenetur libero facere laboriosam, dolore dolor, enim quidem ipsam rem, excepturi quibusdam quam.</p>
+      <div class="about-info circle-info__text">
+        <h3>Gargantúa</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam repellat rerum placeat animi! Explicabo, id! Illo dicta tenetur libero facere laboriosam, dolore dolor, enim quidem ipsam rem, excepturi quibusdam quam.</p>
       </div>
     </div>
   </section>
-  <script src="/app.js"></script>
-  <section class="trailer">
-    <h2 class="trailer__title">Trailer</h3>
+  <section id="trailer" class="section trailer">
+    <h3 class="trailer__title title">Trailer</h3>
     <div class="video">
       <iframe width="760" height="415" src="https://www.youtube.com/embed/zSWdZVtXT7E?si=-30hhrmbXbESp-hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <div class="trailer__info">
-      <span id="button" class="material-symbols-outlined info-arrow">
+    <div class="trailer__info-position circle-info">
+      <span id="button" class="material-symbols-outlined circle">
         radio_button_checked
         </span>
-      <p class="trailer__info-text">Miller's Planet</p>
+      <p class="trailer__info-text circle-info__text">Miller's Planet</p>
     </div>
   </section>
+  <section id="cast" class="section cast">
+    <h3 class="cast__title title">Interstellar Cast</h3>
+    <div class="cast-container">
+      <div class="cast-profile">
+        <img src="/assets/cast-1.jpg" alt="">
+        <p>Matthew McConaughey</p>
+        <p class="cast-character">Joseph Cooper</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-2.jpg" alt="">
+        <p>Anne Hathaway</p>
+        <p class="cast-character">Dr. Amelia Brand</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-3.jpg" alt="">
+        <p>Jessica Chastain</p>
+        <p class="cast-character">Murphy Cooper</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-4.jpg" alt="">
+        <p>Mackenzie Foy</p>
+        <p class="cast-character">young Murphy</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-5.jpg" alt="">
+        <p>Ellen Burstyn</p>
+        <p class="cast-character">elderly Murphy</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-6.jpg" alt="">
+        <p>Casey Affleck </p>
+        <p class="cast-character">Tom Cooper</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-7.png" alt="">
+        <p>Timothée Chalamet</p>
+        <p class="cast-character">young Tom</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-8.jpg" alt="">
+        <p>Michael Caine</p>
+        <p class="cast-character">John Brand</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-9.jpg" alt="">
+        <p>John Lithgow</p>
+        <p class="cast-character">Donald</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-10.jpg" alt="">
+        <p>Wes Bentley</p>
+        <p class="cast-character">Doyle</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-11.jpg" alt="">
+        <p>Matt Damon</p>
+        <p class="cast-character">Dr. Mann</p>
+      </div>
+      <div class="cast-profile">
+        <img src="/assets/cast-12.jpg" alt="">
+        <p>David Gyasi</p>
+        <p class="cast-character">Professor Romilly</p>
+      </div>
+    </div>
+    <div class="cast__info-position circle-info">
+      <span id="button" class="material-symbols-outlined circle">
+        radio_button_checked
+        </span>
+      <p class="cast__info-text circle-info__text">Edmunds' planet</p>
+    </div>
+  </section>
+  <script src="/app.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/*ESTILOS GENERALES*/
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +11,89 @@ body {
   overflow-x: hidden;
 }
 
+/* SECTIONS STYLES*/
+.section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  font-family: "Anta", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home {
+  background-image: url(/assets/hero-img-4.jpg);
+}
+
+.about {
+  background-image: url(/assets/about-img-3.jpg);
+}
+
+.trailer {
+  background-image: url(/assets/about-img-2.jpg);
+}
+
+.cast {
+  background-image: url(/assets/cast-img-2.png);
+}
+
+.home::before,
+.about::before,
+.trailer::before,
+.cast::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.title {
+  font-size: 2.5rem;
+  position: relative;
+  text-transform: uppercase;
+  padding: 40px 0 40px 40px;
+}
+
+/* CIRCLE INFO STYLE*/
+.circle {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+.circle-info {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle-info__text {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0);
+  animation: closeText 0.5s ease-in both;
+  font-family: "Anta", sans-serif;
+}
+
+.circle-info__text.open {
+  animation: openText 0.5s ease-in both;
+}
+
+/*HEADER STYLE*/
 .header {
   width: 100vw;
   padding: 30px 100px;
+  font-family: "Anta", sans-serif;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,31 +121,10 @@ body {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
-  text-transform: uppercase;
-  font-family: "Anta", sans-serif;
-
 }
 
-.hero {
-  background-image: url(/assets/hero-img-4.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-}
-
-.hero__content {
+/* HOME SECTION STYLE*/
+.home__content {
   width: 50%;
   position: absolute;
   left: 80px;
@@ -73,92 +133,20 @@ body {
   font-family: "Anta", sans-serif;
 }
 
-.hero__title {
+.home__title {
   font-size: 70px;
 }
 
-.hero__text {
+.home__text {
   font-size: 18px;
 }
 
-.hero__info {
-  position: absolute;
+.home__info-position {
   bottom: 100px;
   right: 100px;
 }
 
-.hero__info-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: #fff;
-  bottom: -6px;
-  opacity: 0;
-  right: 45px;
-  border-radius: 8px;
-  animation: closeText 0.5s ease-in both;
-  font-family: "Anta", sans-serif;
-}
-
-.hero__info-text.open {
-  animation: openText 0.5s ease-in forwards;
-}
-
-@keyframes openText {
-  from {
-    transform: scale(0.2);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes closeText {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
-.about {
-  width: 100vw;
-  height: 100vh;
-  background-image: url(/assets/about-img-3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  color: #fff;
-  font-family: "Anta", sans-serif;
-}
-
-.about::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-}
-
-.about__title {
-  font-size: 2.5rem;
-  position: relative;
-  text-transform: uppercase;
-  padding: 40px 0 40px 40px;
-}
-
+/* ABOUT SECTION STYLE*/
 .sinopsis {
   padding: 0 0 20px 40px;
   max-width: 500px;
@@ -183,13 +171,13 @@ body {
 }
 
 .cards {
-  position: relative;
-  padding: 0 0 0 40px;
   width: 800px;
   height: 300px;
+  position: relative;
+  padding: 0 0 0 40px;
   display: flex;
-  text-align: center;
   align-items: center;
+  text-align: center;
   gap: 30px;
 }
 
@@ -203,56 +191,19 @@ body {
 }
 
 .card img {
+  margin: 8px 0;
   height: 200px;
   object-fit: cover;
   border-radius: 2px;
-  margin: 8px 0;
 }
 
-.about__info {
+.about__info-position {
   width: 400px;
-  position: absolute;
-  right: 0;
-  top: 320px;
+  right: 100px;
+  top: 250px;
 }
 
-.about-info {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
-  transform: translate(-420px, -40px);
-}
-
-.trailer {
-  background-image: url(/assets/about-img-2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  color: #fff;
-  font-family: "Anta", sans-serif;
-}
-
-.trailer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-}
-
-.trailer__title {
-  font-size: 2.5rem;
-  position: relative;
-  text-transform: uppercase;
-  padding: 40px 0 40px 40px;
-}
-
+/* TRAILER SECTION STYLE*/
 .video {
   top: 50%;
   position: absolute;
@@ -260,26 +211,69 @@ body {
   transform: translate(-50%,-50%);
 }
 
-.trailer__info {
-  position: absolute;
+.trailer__info-position {
   bottom: 50px;
   left: 50px;
+  flex-direction: row;
 }
 
-.trailer__info-text {
+/* CAST SECTION STYLE*/
+.cast-container {
+  padding: 0 40px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cast-profile {
+  flex: 13%;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
-  color: #fff;
-  opacity: 0;
-  border-radius: 8px;
-  animation: closeText 0.5s ease-in both;
-  font-family: "Anta", sans-serif;
-  bottom: 0px;
-  left: 45px;
+  border-radius: 5px;
+}
+
+.cast-profile img {
+  height: 170px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.cast__info-position {
+  right: 100px;
+  top: 40px;
+}
+
+.cast-character {
+  color: #d0d0d0;
+}
+
+/* ANIMATIONS */
+
+@keyframes openText {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes closeText {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
