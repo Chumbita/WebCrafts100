@@ -12,7 +12,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden scroll;
+  overflow: scroll;
 }
 
 /* SECTIONS STYLES*/
@@ -30,9 +30,9 @@ body {
   background-image: url(/assets/hero-img-4.jpg);
 }
 
-.about {
+/* .about {
   background-image: url(/assets/about-img-3.jpg);
-}
+} */
 
 .trailer {
   background-image: url(/assets/about-img-2.jpg);
@@ -43,7 +43,7 @@ body {
 }
 
 .home::before,
-.about::before,
+/* .about::before, */
 .trailer::before,
 .cast::before {
   content: '';
@@ -52,7 +52,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 98%, rgba(0,0,0,0.8) 100%);
 }
 
 .title {
@@ -95,40 +95,37 @@ body {
 /*HEADER STYLE*/
 .header {
   width: 100vw;
-  padding: 30px 100px;
-  font-family: "Anta", sans-serif;
-  text-transform: uppercase;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 2;
+  z-index: 999;
 }
 
-.nav__item{
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-  color: #fff;
+.header.scrolled {
+  background-color: #0c0c0c;
 }
 
-.nav__item.active {
-  font-weight: bold;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 150px;
+.header__nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .nav__links {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
 }
 
-.nav__item:not(.active)::after {
+/* .nav__links:not(.active)::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -140,27 +137,30 @@ body {
   transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
 }
 
-.nav__item:hover::after {
+.nav__links:hover::after {
   width: 100%;
   left: 0;
-}
+} */
 
 /* HOME SECTION STYLE*/
 .home__content {
-  width: 50%;
-  position: absolute;
+  width: 45%;
+  position: relative;
   left: 80px;
-  bottom: 200px;
+  top: 280px;
   color: #fff;
-  font-family: "Anta", sans-serif;
 }
 
 .home__title {
-  font-size: 70px;
+  font-size: 80px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
 }
 
 .home__text {
-  font-size: 18px;
+  font-size: 16px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.1rem;
 }
 
 .home__info-position {
@@ -168,75 +168,110 @@ body {
   right: 100px;
 }
 
-/* ABOUT SECTION STYLE*/
-.sinopsis {
-  padding: 0 0 20px 40px;
-  max-width: 500px;
-  position: relative;
-  color: #8e8e8e;
-}
-
-.sinopsis__title {
-  font-size: 1.5rem;
-}
-
-.sinopsis__text {
-  font-size: 1rem;
-}
-
-.cards__title {
-  position: relative;
-  font-size: 1.5rem;
-  padding-left: 40px;
-  margin-bottom: 10px;
-  color: #8e8e8e;
-}
-
-.cards {
-  width: 800px;
-  height: 300px;
-  position: relative;
-  padding: 0 0 0 40px;
+.carrusel {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30px;
   display: flex;
   align-items: center;
-  text-align: center;
-  gap: 30px;
+  justify-content: center;
 }
 
-.card {
-  position: relative;
-  height: 300px;
+.carrusel-list {
+  width: 80vw;
+  height: inherit;
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #202124;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 15px;
-  transition: transform 0.2s ease-in-out ;
-  padding: 5px;
+  gap: 10px;
+  padding: 15px;
 }
 
-.card:hover {
+.carrusel-img {
+  width: 100%;
+  position: relative;
+  transition: transform 300ms linear;
+  cursor: pointer;
+}
+
+.carrusel-img::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, #000);
+  width: 100%;
+  height: 100%;
+  transition: opacity 300ms linear;
+}
+
+.carrusel-img:hover::before {
+  opacity: 0;
+}
+
+.carrusel-img:hover {
   transform: scale(1.05);
 }
 
-.card img {
-  width: 200px;
-  height: 80%;
+.carrusel-img img {
+  width: inherit;
+  height: 100%;
   object-fit: cover;
-  border-radius: 3px 3px 0 0;
-  object-position: top;
-  object-fit: cover;
+  object-position: center;
 }
 
-.about__info-position {
-  width: 400px;
-  right: 100px;
-  top: 250px;
+/* ABOUT SECTION STYLE*/
+
+.about {
+  width: 100vw;
+  background-color: #FFF;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 80%;
 }
+
+.directores {
+  height: 50vh;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.dictores-info {
+  width: 30%;
+}
+
+.directores__title {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #0c0c0c;
+}
+
+.directores__text {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #868686;
+}
+
+.directores-img {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.directores-img img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  display: flex;
+}
+
+
+
 
 /* TRAILER SECTION STYLE*/
 .video {

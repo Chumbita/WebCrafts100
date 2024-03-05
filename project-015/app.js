@@ -1,12 +1,33 @@
-const $infoBtns = document.querySelectorAll(".circle");
-const $info = document.querySelector(".hero__info-text");
+// const $infoBtns = document.querySelectorAll(".circle");
+// const $info = document.querySelector(".hero__info-text");
 
-console.log($infoBtns);
+// console.log($infoBtns);
 
-$infoBtns.forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    console.log(e.target.nextSibling.nextSibling)
-    e.target.nextSibling.nextSibling.classList.toggle("open");
+// $infoBtns.forEach(btn => {
+//   btn.addEventListener("click", (e) => {
+//     console.log(e.target.nextSibling.nextSibling)
+//     e.target.nextSibling.nextSibling.classList.toggle("open");
+//   })
+// });
+
+const $imgs = document.querySelectorAll(".carrusel-img");
+const $home = document.querySelector(".home");
+const $header = document.getElementById("header");
+
+$imgs.forEach(img => {
+  img.addEventListener("click", (e) => {
+    let src = e.target.firstChild.src;
+    console.log(src);
+    $home.style.backgroundImage = `url(${src})`;
   })
-});
+})
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 0) {
+    $header.classList.add("scrolled");
+  }
+  else {
+    $header.classList.remove("scrolled");
+  }
+})
 
