@@ -12,84 +12,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  overflow: scroll;
-}
-
-/* SECTIONS STYLES*/
-.section {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-  font-family: "Anta", sans-serif;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.home {
-  background-image: url(/assets/hero-img-4.jpg);
-}
-
-/* .about {
-  background-image: url(/assets/about-img-3.jpg);
-} */
-
-/* .trailer {
-  background-image: url(/assets/about-img-2.jpg);
-} */
-
-.cast {
-  background-image: url(/assets/cast-img-2.png);
-}
-
-.home::before,
-/* .about::before, */
-/* .trailer::before, */
-.cast::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 98%, rgba(0,0,0,0.8) 100%);
-}
-
-.title {
-  font-size: 2.5rem;
-  position: relative;
-  text-transform: uppercase;
-  padding: 40px 0 40px 40px;
-}
-
-/* CIRCLE INFO STYLE*/
-.circle {
-  color: #fff;
-  font-size: 25px;
-  cursor: pointer;
-}
-.circle-info {
-  position: absolute;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.circle-info__text {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 20px 30px;
-  border-radius: 20px;
-  opacity: 0;
-  transform: scale(0);
-  animation: closeText 0.5s ease-in both;
-  font-family: "Anta", sans-serif;
-}
-
-.circle-info__text.open {
-  animation: openText 0.5s ease-in both;
+  overflow: hidden scroll;
 }
 
 /*HEADER STYLE*/
@@ -125,24 +48,26 @@ body {
   cursor: pointer;
 }
 
-/* .nav__links:not(.active)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background-color: #fff ; 
-  z-index: 2;
-  transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
+/* HOME SECTION STYLE*/
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/hero-img-4.jpg);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.nav__links:hover::after {
+.home::before{
+  content: '';
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
   left: 0;
-} */
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
 
-/* HOME SECTION STYLE*/
 .home__content {
   width: 45%;
   position: relative;
@@ -161,11 +86,6 @@ body {
   font-size: 16px;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.1rem;
-}
-
-.home__info-position {
-  bottom: 100px;
-  right: 100px;
 }
 
 .carrusel {
@@ -220,23 +140,36 @@ body {
   object-position: center;
 }
 
-/* ABOUT SECTION STYLE*/
-.about {
+/* SECTIONS TITLES AND TEXT*/
+.section-title {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #0c0c0c;
+}
+
+.section-text {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #868686;
+}
+
+/* MAIN STYLE*/
+.main {
   width: 100vw;
   background-color: #FFF;
   margin: 0 auto;
   padding: 5vh 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  max-width: 70%;
-  gap: 20px;
+  max-width: 65%;
+  gap: 50px;
 }
 
 .directores {
-  height: 50vh;
+  height: 40vh;
   display: flex;
-  padding: 0 30px;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -244,18 +177,6 @@ body {
 
 .dictores-info {
   width: 40%;
-}
-
-.directores__title {
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #0c0c0c;
-}
-
-.directores__text {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: #868686;
 }
 
 .directores-img {
@@ -280,25 +201,8 @@ body {
   transform: scale(1.01);
 }
 
-.sinopsis {
-  padding: 0 30px;
-  width: 100%;
-}
-
-.sinopsis__title {
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #0c0c0c;
-}
-
-.sinopsis__text {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: #868686;
-}
-
 .sinopsis-img {
-  margin: 30px auto;
+  margin: 30px auto 0 auto; 
   width: 100%;
   height: auto;
 }
@@ -308,32 +212,17 @@ body {
   height: auto;
 }
 
-.section.about {
-  height: 100%;
-  margin-bottom: 20px;
-}
-
-.science {
-  padding: 0 30px;
-  width: 100%;
-}
-
-.science__title {
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #0c0c0c;
-}
-
-.science__text {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: #868686;
-}
-
 .science img {
   margin: 30px auto;
   width: 100%;
   height: auto;
+}
+
+.video {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .puntuacion {
@@ -376,26 +265,6 @@ body {
 
 .stat-text {
   font-size: 1.05rem;
-}
-
-/* TRAILER SECTION STYLE*/
-
-.trailer {
-  width: 100%;
-  padding: 0 30px;
-}
-
-.trailer__title  {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
-  color: #0c0c0c;
-}
-
-.video {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 /* CAST SECTION STYLE*/
@@ -456,28 +325,4 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* ANIMATIONS */
-
-@keyframes openText {
-  from {
-    transform: scale(0.2);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes closeText {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(0);
-    opacity: 0;
-  }
 }
