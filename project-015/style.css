@@ -34,9 +34,9 @@ body {
   background-image: url(/assets/about-img-3.jpg);
 } */
 
-.trailer {
+/* .trailer {
   background-image: url(/assets/about-img-2.jpg);
-}
+} */
 
 .cast {
   background-image: url(/assets/cast-img-2.png);
@@ -44,7 +44,7 @@ body {
 
 .home::before,
 /* .about::before, */
-.trailer::before,
+/* .trailer::before, */
 .cast::before {
   content: '';
   width: 100%;
@@ -178,6 +178,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .carrusel-list {
@@ -220,33 +221,34 @@ body {
 }
 
 /* ABOUT SECTION STYLE*/
-
 .about {
   width: 100vw;
   background-color: #FFF;
   margin: 0 auto;
+  padding: 5vh 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-width: 80%;
+  max-width: 70%;
+  gap: 20px;
 }
 
 .directores {
   height: 50vh;
   display: flex;
-  padding: 30px;
+  padding: 0 30px;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
 }
 
 .dictores-info {
-  width: 30%;
+  width: 40%;
 }
 
 .directores__title {
   font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 30px;
   color: #0c0c0c;
 }
@@ -257,34 +259,143 @@ body {
 }
 
 .directores-img {
-  width: 70%;
+  width: 60%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 30px;
+  justify-content: flex-end;
 }
 
 .directores-img img {
-  width: 200px;
-  height: 250px;
+  width: 170px;
+  height: auto;
   object-fit: cover;
   object-position: top;
   display: flex;
+  cursor: pointer;
+  transition: transform 200ms linear;
+  user-select: none;
 }
 
+.directores-img img:hover {
+  transform: scale(1.01);
+}
 
+.sinopsis {
+  padding: 0 30px;
+  width: 100%;
+}
 
+.sinopsis__title {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #0c0c0c;
+}
+
+.sinopsis__text {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #868686;
+}
+
+.sinopsis-img {
+  margin: 30px auto;
+  width: 100%;
+  height: auto;
+}
+
+.sinopsis-img img {
+  width: inherit;
+  height: auto;
+}
+
+.section.about {
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.science {
+  padding: 0 30px;
+  width: 100%;
+}
+
+.science__title {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #0c0c0c;
+}
+
+.science__text {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #868686;
+}
+
+.science img {
+  margin: 30px auto;
+  width: 100%;
+  height: auto;
+}
+
+.puntuacion {
+  text-align: center;
+  padding: 50px 30px;
+  width: 100%;
+}
+
+.puntuacion__title {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #0c0c0c;
+}
+
+.stats {
+  font-family: "IBM Plex Sans", sans-serif;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  color: #0c0c0c;
+  justify-content: center;
+  gap: 100px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+.stat-number {
+  font-size: 2rem;
+}
+
+.stat-number span {
+  color: #c0c0c0;
+}
+
+.stat-text {
+  font-size: 1.05rem;
+}
 
 /* TRAILER SECTION STYLE*/
-.video {
-  top: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,-50%);
+
+.trailer {
+  width: 100%;
+  padding: 0 30px;
 }
 
-.trailer__info-position {
-  bottom: 50px;
-  left: 50px;
-  flex-direction: row;
+.trailer__title  {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  color: #0c0c0c;
+}
+
+.video {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* CAST SECTION STYLE*/
