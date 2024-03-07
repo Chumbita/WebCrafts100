@@ -165,7 +165,7 @@ body {
   gap: 50px;
 }
 
-.directores {
+.production {
   height: 40vh;
   display: flex;
   justify-content: center;
@@ -173,18 +173,18 @@ body {
   gap: 20px;
 }
 
-.dictores-info {
+.production-info {
   width: 40%;
 }
 
-.directores-img {
+.production-img {
   width: 60%;
   display: flex;
   gap: 30px;
   justify-content: flex-end;
 }
 
-.directores-img img {
+.production-img img {
   width: 170px;
   height: auto;
   object-fit: cover;
@@ -195,7 +195,7 @@ body {
   user-select: none;
 }
 
-.directores-img img:hover {
+.production-img img:hover {
   transform: scale(1.01);
 }
 
@@ -223,7 +223,7 @@ body {
   justify-content: center;
 }
 
-.puntuacion {
+.rating {
   text-align: center;
   width: 100%;
 }
