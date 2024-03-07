@@ -10,8 +10,6 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100%;
   overflow: hidden scroll;
 }
 
@@ -52,7 +50,7 @@ body {
 .home {
   width: 100vw;
   height: 100vh;
-  background-image: url(/assets/hero-img-4.jpg);
+  background-image: url(/assets/hero-image-1.jpg);
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
@@ -227,15 +225,7 @@ body {
 
 .puntuacion {
   text-align: center;
-  padding: 50px 30px;
   width: 100%;
-}
-
-.puntuacion__title {
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #0c0c0c;
 }
 
 .stats {
@@ -245,6 +235,7 @@ body {
   display: flex;
   color: #0c0c0c;
   justify-content: center;
+  align-items: center;
   gap: 100px;
 }
 
@@ -255,6 +246,7 @@ body {
   gap: 5px;
   text-align: center;
 }
+
 .stat-number {
   font-size: 2rem;
 }
@@ -267,62 +259,69 @@ body {
   font-size: 1.05rem;
 }
 
+.cast {
+  width: 100%;
+}
+
 /* CAST SECTION STYLE*/
 .cast-container {
-  padding: 0 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 20px;
 }
 
 .cast-profile {
-  position: relative;
+  width: 100%;
   height: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #202124;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 15px;
-  transition: transform 0.2s ease-in-out ;
-  padding: 5px;
 }
 
 .cast-profile img {
-  width: 200px;
-  height: 80%;
+  width: 100%;
+  height: inherit;
   object-fit: cover;
-  border-radius: 3px 3px 0 0;
   object-position: top;
   object-fit: cover;
+  cursor: pointer;
+  transition: transform 200ms linear;
+  user-select: none;
 }
 
-.cast-profile:hover {
-  transform: scale(1.05);
-}
-
-.cast__info-position {
-  right: 100px;
-  top: 40px;
+.cast-profile img:hover {
+  transform: scale(1.01);
 }
 
 .cast-character {
-  margin-bottom: 20px;
-  color: #b0b0b0;
+  color: #c0c0c0;
+  font-size: .9rem;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.casting-btn {
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #0c0c0c;
+  color: #FFF;
+  font-family: "IBM Plex Sans", sans-serif; ;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .footer {
-  height: 300px;
+  height: 120px;
   width: 100%;
   background-color: #0c0c0c;
   color: #fff;
-  font-family: "Anta", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif; ;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  font-size: 0.8rem;
 }
