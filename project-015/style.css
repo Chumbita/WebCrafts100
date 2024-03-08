@@ -166,7 +166,6 @@ body {
 }
 
 .production {
-  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,6 +215,10 @@ body {
   height: auto;
 }
 
+.trailer {
+  width: 100%;
+}
+
 .video {
   margin-top: 20px;
   width: 100%;
@@ -245,6 +248,7 @@ body {
   align-items: center;
   gap: 5px;
   text-align: center;
+  flex: 50%;
 }
 
 .stat-number {
@@ -273,6 +277,7 @@ body {
 .cast-profile {
   width: 100%;
   height: 280px;
+  margin: 0 auto;
 }
 
 .cast-profile img {
@@ -324,4 +329,98 @@ body {
   justify-content: space-around;
   align-items: center;
   font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .home {
+    padding: 0 30px ;
+    background-image: url(/assets/hero-img-phone.jpg);
+    background-size: 150%;
+    background-position: top center;
+  }
+
+  .home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, #000 70%);
+  }
+
+  .carrusel {
+    display: none;
+  }
+
+  .home__content {
+    width: 100%;
+    left: 0;
+    top: 500px;
+  }
+
+  .home__title {
+    font-size: 40px;
+  }
+
+  .home__text {
+    font-size: .9rem;
+  }
+  
+  .main {
+    max-width: 85vw;
+  }
+
+  .stats{
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+  
+  .stat-text {
+    font-size: 0.8rem;
+  }
+
+  .production {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .production-info,
+  .production-img {
+    width: 100%;
+  }
+
+  .production-img {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .production-img img {
+    width: 80%;
+    height: 320px;
+  }
+
+  .cast-container {
+    grid-template-columns: repeat(2, 47%);
+    margin: 0 auto;
+  }
+
+  .cast-profile {
+    height: 250px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .video-cont {
+    width: 100%;
+    height: 200px;
+  }
+
+  
 }
