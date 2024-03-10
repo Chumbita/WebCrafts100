@@ -29,7 +29,7 @@ body {
   background-color: #0c0c0c;
 }
 
-.header__nav {
+.nav {
   width: 70%;
   display: flex;
   align-items: center;
@@ -156,13 +156,12 @@ body {
   width: 100vw;
   background-color: #FFF;
   margin: 0 auto;
-  padding: 5vh 0;
+  padding-top: 8vh ;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   max-width: 65%;
-  gap: 50px;
 }
 
 .production {
@@ -198,6 +197,10 @@ body {
   transform: scale(1.01);
 }
 
+.sinopsis{
+  padding-top: 8vh ;
+}
+
 .sinopsis-img {
   margin: 30px auto 0 auto; 
   width: 100%;
@@ -209,6 +212,10 @@ body {
   height: auto;
 }
 
+.science {
+  padding-top: 8vh ;
+}
+
 .science img {
   margin: 30px auto;
   width: 100%;
@@ -217,6 +224,7 @@ body {
 
 .trailer {
   width: 100%;
+  padding-top: 8vh;
 }
 
 .video {
@@ -229,6 +237,7 @@ body {
 .rating {
   text-align: center;
   width: 100%;
+  padding-top: 8vh ;
 }
 
 .stats {
@@ -263,11 +272,13 @@ body {
   font-size: 1.05rem;
 }
 
-.cast {
-  width: 100%;
-}
 
 /* CAST SECTION STYLE*/
+.cast {
+  width: 100%;
+  padding-top: 8vh ;
+}
+
 .cast-container {
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -324,7 +335,7 @@ body {
   width: 100%;
   background-color: #0c0c0c;
   color: #fff;
-  font-family: "IBM Plex Sans", sans-serif; ;
+  font-family: "IBM Plex Sans", sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -332,6 +343,73 @@ body {
 }
 
 @media (max-width: 576px) {
+  .nav {
+    display: none;
+  }
+
+  .menu {
+    margin: 15px;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .lines {
+    width: 100%;
+    height: 0.4rem;
+    background-color: #FFF;
+    border-radius: 5px;
+    transform-origin: top left;
+    transition: transform 200ms linear, opacity 200ms linear;
+  }
+
+  .line-1 {
+    transform: translate(0);
+  }
+
+  .line-2 {
+    transform: translateY(0.4rem);
+  }
+
+  .line-3 {
+    transform: translateY(0.8rem);
+  }
+
+  .line-1.open {
+    transform: translate(5px) rotate(45deg);
+  }
+
+  .line-2.open {
+    opacity: 0;
+  }
+
+  .line-3.open {
+    transform: translateY(15px) rotate(-45deg);
+  }
+
+  .header.open {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c0c0c;
+  }
+
+  .header.open .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 20px;
+  }
+
+  .header.open .nav a {
+    font-size: 2rem;
+  }
+
   .home {
     padding: 0 30px ;
     background-image: url(/assets/hero-img-phone.jpg);
@@ -421,6 +499,4 @@ body {
     width: 100%;
     height: 200px;
   }
-
-  
 }

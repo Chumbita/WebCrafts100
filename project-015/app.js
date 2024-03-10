@@ -13,6 +13,9 @@
 const $imgs = document.querySelectorAll(".carrusel-img");
 const $home = document.querySelector(".home");
 const $header = document.getElementById("header");
+const $hamburgerMenu = document.querySelector(".menu");
+const $HMLines = document.querySelectorAll(".lines");
+const $sections = document.querySelectorAll(".nav__links");
 
 $imgs.forEach(img => {
   img.addEventListener("click", (e) => {
@@ -31,3 +34,18 @@ window.addEventListener("scroll", () => {
   }
 })
 
+$hamburgerMenu.addEventListener("click", ()=> {
+  $HMLines.forEach(line => {
+    line.classList.toggle("open");
+  })
+  $header.classList.toggle("open");
+})
+
+$sections.forEach(section => {
+  section.addEventListener("click", (e)=> {
+    $header.classList.remove("open");
+    $HMLines.forEach(line => {
+      line.classList.toggle("open");
+    })
+  })
+})
