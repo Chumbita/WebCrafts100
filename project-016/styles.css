@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #859398, #283048) ;
+}
+
+.container-carousel {
+  width: 500px;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carruseles {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-section {
+  width: calc(100 / 3);
+  height: 100%;
+}
+
+.slider-section img {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.btn-left,
+.btn-right {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  padding: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transform: translate(0, -50%);
+  user-select: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  background-color: #000;
+  color: #fff;
+} 
+
+.btn-right {
+  right: 10px;
+}
+
+.btn-left {
+  left: 10px;
+}
+
