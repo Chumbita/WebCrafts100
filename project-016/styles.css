@@ -5,7 +5,8 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
+  width: 100vw;
 }
 
 main {
@@ -13,14 +14,13 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   padding: 20px;
   background: linear-gradient(to right, #859398, #283048) ;
   gap: 20px;
 }
 
-/*CAROUSEL 1*/
-.carousel-1 {
+/*CARRUSEL 1*/
+.carrusel-1 {
   width: 500px;
   height: 300px;
   background-color: #e0e0e0;
@@ -145,4 +145,33 @@ main {
 
 #img5:checked ~ .image5 {
   margin-left: -80%;
+}
+
+/*Carousel automático*/
+.carrusel-3 {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.automatic-slider {
+  width: 500%;
+  height: 300px;
+  display: flex;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.auto-slider-section {
+  width: calc(100/5);
+  height: 300px;
+}
+
+.auto-slider-section img {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
