@@ -12,12 +12,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   padding: 20px;
   background: linear-gradient(to right, #859398, #283048) ;
+  gap: 20px;
 }
 
-.container-carousel {
+/*CAROUSEL 1*/
+.carousel-1 {
   width: 500px;
   height: 300px;
   background-color: #e0e0e0;
@@ -26,15 +29,15 @@ main {
   position: relative;
 }
 
-.carruseles {
-  width: 600%;
+.slider-1 {
+  width: 600%; /*Depende del número de imágenes*/
   height: 100%;
   display: flex;
   transition: transform 0.5s ease;
 }
 
 .slider-section {
-  width: calc(100 / 3);
+  width: calc(100 / 3); /*Se divide el 100% del contenedor padre sobre la cantidad de imagenes para saber cuanto espacio ocupa cada imagen*/
   height: 100%;
 }
 
@@ -76,3 +79,70 @@ main {
   left: 10px;
 }
 
+/* CAROUSEL 2: Solo CSS*/
+.carouse-2 {
+  width: 500px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carouse-2 input {
+  display: none;
+}
+
+.slider{
+  width: 500%;  /*Depende del número de imágenes*/
+  height: 100%;
+  display: flex;
+}
+
+.slider img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+  border-radius: 15px;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.circles label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.circles label:hover {
+  opacity: 100%;
+}
+
+#img1:checked ~ .image1 {
+  margin-left: 0;
+}
+
+#img2:checked ~ .image2 {
+  margin-left: -20%;
+}
+
+#img3:checked ~ .image3 {
+  margin-left: -40%;
+}
+
+#img4:checked ~ .image4 {
+  margin-left: -60%;
+}
+
+#img5:checked ~ .image5 {
+  margin-left: -80%;
+}
