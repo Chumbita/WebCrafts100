@@ -1,0 +1,5 @@
+Proyecto 17: 
+En este proyecto, se ha implementado una barra de navegación lateral que cuenta con secciones desplegables. Cada sección presenta un botón que permite al usuario expandir las subsecciones correspondientes. Para lograr esta funcionalidad y la interactividad deseada, se utilizó JavaScript para manejar los eventos asociados a los botones y para gestionar el cambio de estado de diversos elementos en la interfaz.
+
+Project 17: 
+In this project, a side navigation bar with collapsible sections is implemented. Each section contains a button for users to expand sub-sections. These functionalities and interactivity are implemented using JavaScript, handling events on the buttons, and changing the states of various elements.
